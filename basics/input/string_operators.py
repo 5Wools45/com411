@@ -10,3 +10,6 @@ print("Health has been set")
 
 #displaying levels
 
+print(f"Lives:  {'♥' * lives}")
+print(f"Energy:  {'♦' * energy}")
+print(f"Shield:  {'♦' * shield}")

@@ -7,7 +7,7 @@ def escape_by(plan):
         print("That might just work! Lets go deeper!")
     else:
         print("We cannot escape that way! The boulder is in the way.")
-
-escape_by("jumping over")
-escape_by("running around")
-escape_by("going deeper")
+if __name__ == "__main__":
+    escape_by("jumping over")
+    escape_by("running around")
+    escape_by("going deeper")

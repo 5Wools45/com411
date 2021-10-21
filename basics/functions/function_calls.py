@@ -57,6 +57,7 @@ def run():
         repeat(word)
     else:
         print("Unknown Option")
+if __name__ == "__main__":
+    run()
 
-run()
 

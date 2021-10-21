@@ -9,4 +9,5 @@ def create_ladder():
     steps = int(input())
     display_ladder(steps)
 
-create_ladder()
+if __name__ == "__main__":
+    create_ladder()

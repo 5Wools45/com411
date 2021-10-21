@@ -22,4 +22,5 @@ def run():
         print(f"The avg weight is {response}")
     else:
         print("I am not sure what you are asking.")
-run()
+if __name__ == "__main__":
+    run()

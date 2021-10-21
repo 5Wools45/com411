@@ -1,13 +1,16 @@
-print("How many rows should I have?")
-rows = int(input())
+def run():
+    print("How many rows should I have?")
+    rows = int(input())
 
-print("How many columns should I have?")
+    print("How many columns should I have?")
 
-cols = int(input())
+    cols = int(input())
 
-print("\nHere I go:")
+    print("\nHere I go:")
 
-for row in range(rows):
-    for col in range(cols):
-        print(":-)", end="")
-    print()
+    for row in range(rows):
+        for col in range(cols):
+            print(":-)", end="")
+        print()
+if __name__ == "__main__":
+    run()

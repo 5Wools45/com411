@@ -35,6 +35,7 @@ def display_passenger_names():
         print(passenger_name)
 
 
+def display_num_survivors():
 
 
 

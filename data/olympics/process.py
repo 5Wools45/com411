@@ -6,18 +6,18 @@ year_column = 9
 
 
 def list_years(data):
-    tui.started(f"Extracting distinct years from {data}")
-    year_set = set()
+    tui.started("Listing years")
+    years = set()
     for record in data:
         year = record[year_column]
-        year_set.add(year)
-    tui.display_years(year_set)
+        years.add(year)
+    tui.display_years(years)
     tui.completed()
 
 
 def tally_medals(data):
     tui.started("Tallying medals")
-    medal_tally = {"Gold": "0", "Silver": "0", "Bronze": "0"}
+    medal_tally = {"Gold": 0, "Silver": 0, "Bronze": 0}
     for record in data:
         medal = record[medal_column]
         if medal in ("Gold", "Silver", "Bronze"):

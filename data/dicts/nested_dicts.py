@@ -18,7 +18,7 @@ def run():
     new_dict = {
         "short sequence": short_pattern(),
         "medium sequence": medium_pattern(),
-        "long sequqnce": long_pattern()
+        "long sequence": long_pattern()
     }
     for key, value in new_dict.items():
         print(f"{key}, {value}")

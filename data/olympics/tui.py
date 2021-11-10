@@ -40,6 +40,7 @@ def display_team_medal_tally(team_tally):
 
 
 def display_years(years):
-    for years in sorted(years, reverse=True):
-        print(years)
+    sorted_years = sorted(years, reverse=True)
+    for year in sorted_years:
+        print(year)
 

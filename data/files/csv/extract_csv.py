@@ -1,5 +1,6 @@
 import csv
 
+
 def extract(path):
     print("Extracting...")
     names = ""
@@ -11,8 +12,10 @@ def extract(path):
         print("Done! The extracted names are as follows:")
         print(f"\n{names}")
 
+
 def run():
     extract("bots.csv")
+
 
 if __name__ == "__main__":
     run()

@@ -4,8 +4,15 @@ import tui
 
 
 def read_data(file_path):
-    tui.started("")
+    tui.started(f"Reading data from {file_path}")
+    data = []
     with open(file_path):
+        csv_reader = csv.reader(file_path)
+        headings = next(csv_reader)
+        for lines in csv_reader:
+            data += f"{lines}"
+    tui.completed()
+    return data
 
 
 def run():

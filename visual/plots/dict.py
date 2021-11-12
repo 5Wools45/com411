@@ -22,7 +22,7 @@ def generate():
     for number in range(lines):
         values = data()
         format = f"{values['colour']}{values['marker']}{values['line']}"
-        plt.plot(random.sample(range(1, 10), 1), random.sample(range(1, 10), 1), format)
+        plt.plot(random.sample(range(1, 100), 50), random.sample(range(1, 100), 50), format)
 
 
 

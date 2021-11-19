@@ -7,35 +7,16 @@ def read_data():
         headings = next(csv_reader)
         data = {'survived': [], 'sex': [], 'age': [], 'fare': []}
         ## add survived values to dict
+        gender = ['male', 'female']
         for record in csv_reader:
-            if record[1] is None:
-                pass
-            elif record[1] == 0:
-                pass
-            else:
-                data['survived'].append(record[1])
-        ## add sex to values in dict
-        for record in csv_reader:
-            if record[15] is None:
-                pass
-            elif record[15] == 0:
-                data['sex'].append('male')
-            else:
-                data['sex'].append('female')
-        ## add age to values in dict
-        for record in csv_reader:
-            if record[4] is None:
-                pass
-            else:
-                data['age'].append(record[4])
-        ## add fare as a float to values in dict
-        for record in csv_reader:
-            if record[8] is None:
-                pass
-            else:
-                data['fare'].append(round(record[8], 2))
-        print(data)
-        return data
+            if record[1].strip() != "" and record[14] != "" and record[4].strip() != "" and record[8].strip() != "":
+
+                data['survived'].append(record[1].strip())
+                data['sex'].append(gender[int(record[14].strip())])
+                data['age'].append(record[4].strip())
+                data['fare'].append(round(float(record[8]), 2))
+    print(data)
+    return data
 
 
 read_data()

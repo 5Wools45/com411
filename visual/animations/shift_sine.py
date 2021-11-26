@@ -7,12 +7,11 @@ fig, ax = plt.subplots()
 
 def animate(frame):
     global ax
-    ax.set_xlim(frame, frame + 1)
+    ax.cla()
+    ax.set_xlim(0, 720)
     ax.set_ylim(-1, 1)
-    x = range(0, frame)
-    y = []
-    for degrees in x:
-        y.append(math.sin(math.radians(degrees)))
+    x = range(0, 360)
+    y = [math.sin(math.radians(degrees) + (frame / 50)) for degrees in x]
     ax.plot(x, y)
 
 
